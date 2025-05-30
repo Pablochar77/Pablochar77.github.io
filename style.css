@@ -1,0 +1,135 @@
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color:whitesmoke;
+      animation: fadeIn 1s ease-in;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    
+    header {
+      background-color: rgba(28, 28, 28, 0.9);
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: orange;
+    }
+
+    
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color:white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background-color:orange;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color:orange;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    main h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    main p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+  
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: rgba(28, 28, 28, 0.6);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+ul{
+  list-style-type: none;
+}
+
+ol{
+  list-style-type: none;
+  position: relative;
+}
+
+.asignaturas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.asignatura-card {
+  display: block;
+  background-color: black;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  border: 2px solid orange;
+}
+
+.asignatura-card:hover {
+  background-color:black;
+  transform: scale(1.05);
+  color:orange;
+}
+
+
