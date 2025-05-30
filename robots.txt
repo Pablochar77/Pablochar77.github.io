@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: http://pablochar77.github.io/sitemap.xml
